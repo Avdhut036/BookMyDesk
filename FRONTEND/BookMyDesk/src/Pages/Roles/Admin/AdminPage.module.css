@@ -4,20 +4,20 @@
     height: 100vh;
   }
   
-  .content {
+  .mainContentWrapper {
     display: flex;
     flex: 1;
+  }
+  
+  .sideNav {
+    width: 250px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
   }
   
   .mainContent {
     flex: 1;
     padding: 16px;
     background-color: #f4f6f8;
-  }
-  
-  .adminSideNav {
-    width: 250px;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
   }
   

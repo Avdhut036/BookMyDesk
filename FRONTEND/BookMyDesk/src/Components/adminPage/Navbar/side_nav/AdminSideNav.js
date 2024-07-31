@@ -48,12 +48,17 @@ const AdminSideNav = () => {
           <Box component="div" className={styles.subMenu}>
             <ListItem disablePadding>
               <ListItemButton>
-                <ListItemText primary="Dashboard Item 1" />
+                <ListItemText primary="Booking History" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
-                <ListItemText primary="Dashboard Item 2" />
+                <ListItemText primary="User Management" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemText primary="Seat Management" />
               </ListItemButton>
             </ListItem>
           </Box>
@@ -87,12 +92,12 @@ const AdminSideNav = () => {
           <Box component="div" className={styles.subMenu}>
             <ListItem disablePadding>
               <ListItemButton>
-                <ListItemText primary="Floor Layout Item 1" />
+                <ListItemText primary="Floor - 1" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
-                <ListItemText primary="Floor Layout Item 2" />
+                <ListItemText primary="Floor - 2" />
               </ListItemButton>
             </ListItem>
           </Box>
