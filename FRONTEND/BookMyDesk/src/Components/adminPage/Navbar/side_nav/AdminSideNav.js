@@ -1,7 +1,6 @@
 import styles from "./AdminSideNav.module.css"; 
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -17,7 +16,8 @@ import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import Logo from '../../../../assets/SSPL-LOGO-1.ico';
 
-const AdminSideNav = ({ open, onClose }) => {
+const AdminSideNav = () => {
+
   const [openAdminDashboard, setOpenAdminDashboard] = React.useState(false);
   const [openFloorLayout, setOpenFloorLayout] = React.useState(false);
 
@@ -30,7 +30,6 @@ const AdminSideNav = ({ open, onClose }) => {
   };
 
   const DrawerList = (
-    
     <Box sx={{ width: 250 }} role="presentation">
       <Box sx={{ textAlign: 'center', padding: '16px' }}>
         <img src={Logo} alt="Company Logo" className={styles.logo} />
@@ -110,23 +109,11 @@ const AdminSideNav = ({ open, onClose }) => {
       <Divider />
     </Box>
   );
-
+  
   return (
-    <Drawer
-      sx={{
-        width: 250,
-        flexShrink: 0,
-        '& .MuiDrawer-paper': {
-          width: 250,
-          boxSizing: 'border-box',
-        },
-      }}
-      variant="persistent"
-      anchor="left"
-      open={open}
-    >
+    <div>
       {DrawerList}
-    </Drawer>
+    </div>
   );
 }
 

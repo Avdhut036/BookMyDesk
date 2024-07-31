@@ -1,0 +1,23 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 16px;
+    background-color: #f4f6f8;
+  }
+  
+  .adminSideNav {
+    width: 250px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+  }
+  
