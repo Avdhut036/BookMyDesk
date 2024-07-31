@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const AddUser = () => {
   const initialFormData = {
@@ -14,7 +15,21 @@ const AddUser = () => {
     seatName: "",
   };
   const [formData, setFormData] = useState(initialFormData);
+  const [roles, setRoles] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/api/role`);
+        setRoles(response.data);
+        console.log("fetchdata:", response);
+      } catch (error) {
+        console.log("Error fetching roles: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -122,12 +137,12 @@ const AddUser = () => {
             value={formData.role}
             onChange={handleChange}
           >
-            {" "}
             <option value="">Select Role</option>
-            <option value="dailyEmployee">Daily Employee</option>
-            <option value="weeklyEmployee">Weekly Employee</option>
-            <option value="teamLead">Team Leader</option>
-            <option value="admin">Admin</option>
+            {roles.map((role) => (
+              <option key={role.roleId} value={role.roleId}>
+                {role.roleName}
+              </option>
+            ))}
           </select>
         </div>
         <div className="mb-3">

@@ -26,6 +26,7 @@ namespace BMDApplication.Controllers
                 return BadRequest(e.Message);
             }
         }
+       
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id) {

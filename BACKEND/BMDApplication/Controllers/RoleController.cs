@@ -12,8 +12,12 @@ namespace BMDApplication.Controllers
         public RoleController(BMDDbContext context) {
             _context = context;
         }
+
+       
         [HttpGet]
-        public IActionResult Get() {
+        [Route("getby")]
+        public IActionResult Getby() {
+            Console.WriteLine("in getby");
             try
             {
                 var roles = _context.Roles.ToList();
@@ -27,7 +31,25 @@ namespace BMDApplication.Controllers
                 return BadRequest(e.Message);                
             }
         }
-
+        [HttpGet]
+        [Route("getbb")]
+        public IActionResult Getb()
+        {
+            Console.WriteLine("in getb");
+            try
+            {
+                var roles = _context.Roles.ToList();
+                if (roles == null)
+                {
+                    return NotFound("Roles not found");
+                }
+                return Ok(roles);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
 
     }
 }
