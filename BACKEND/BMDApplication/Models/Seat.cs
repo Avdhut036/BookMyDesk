@@ -1,14 +1,19 @@
-﻿namespace BMDApplication.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BMDApplication.Models
 {
     public class Seat
     {
-        public int SeatId { get; set; }
-        public string? SeatName { get; set; }
-        public int SeatFloor { get; set; }
-        public string? SeatType { get; set; }
-        public string? CurrentStatus { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int seatId { get; set; }
 
-        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+        public string? seatName { get; set; }
+        public int seatFloor { get; set; }
+        public string? seatType { get; set; }
+        public string? currentStatus { get; set; }
+
+        public ICollection<Booking> bookings { get; set; } = new List<Booking>();
     }
-
 }

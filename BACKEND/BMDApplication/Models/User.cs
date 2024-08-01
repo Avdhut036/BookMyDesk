@@ -7,38 +7,38 @@ namespace BMDApplication.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
+        public int userId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string? FirstName { get; set; } 
+        public string? firstName { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string? LastName { get; set; }
+        public string? lastName { get; set; }
 
         [Required]
-        [EmailAddress] 
+        [EmailAddress]
         [MaxLength(50)]
-        public string? EmailId { get; set; } 
+        public string? emailId { get; set; }
 
-        public int RoleId { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string? RoleFrequency { get; set; } 
+        public int roleId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string? Password { get; set; } 
+        public string? roleFrequency { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string? PhoneNo { get; set; } 
+        public string? password { get; set; }
 
-        [ForeignKey("RoleId")]
-        public Role? Role { get; set; } // Navigation property
+        [Required]
+        [MaxLength(50)]
+        public string? phoneNo { get; set; }
 
-        public ICollection<Booking> Bookings { get; set; } = new List<Booking>(); // Initialized collection
+        [ForeignKey("roleId")]
+        public Role? role { get; set; } // Navigation property
+
+        public ICollection<Booking> bookings { get; set; } = new List<Booking>(); // Initialized collection
     }
 }

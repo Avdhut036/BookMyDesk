@@ -10,29 +10,39 @@ namespace BMDApplication.Data
         {
         }
 
-        public DbSet<User> BMDUsers { get; set; }
-        public DbSet<Seat> Seats { get; set; }
-        public DbSet<Booking> Bookings { get; set; }
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Seat> seats { get; set; }
+        public DbSet<Booking> bookings { get; set; }
+        public DbSet<Role> roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configure User-Role relationship
             modelBuilder.Entity<User>()
-                .HasOne(u => u.Role)
-                .WithMany(r => r.Users)
-                .HasForeignKey(u => u.RoleId)
+                .HasOne(u => u.role)
+                .WithMany(r => r.users)
+                .HasForeignKey(u => u.roleId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Configure Booking-User (bookedBy) relationship
             modelBuilder.Entity<Booking>()
-                .HasOne(b => b.BookedByUser)
-                .WithMany(u => u.Bookings)
-                .HasForeignKey(b => b.BookedBy)
+                .HasOne(b => b.bookedByUser)
+                .WithMany(u => u.bookings)
+                .HasForeignKey(b => b.bookedBy)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Configure Booking-User (bookedFor) relationship
             modelBuilder.Entity<Booking>()
-                .HasOne(b => b.BookedSeat)
-                .WithMany(s => s.Bookings)
-                .HasForeignKey(b => b.BookedSeatNo)
+                .HasOne(b => b.bookedForUser)
+                .WithMany()
+                .HasForeignKey(b => b.bookedFor)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Configure Booking-Seat relationship
+            modelBuilder.Entity<Booking>()
+                .HasOne(b => b.bookedSeat)
+                .WithMany(s => s.bookings)
+                .HasForeignKey(b => b.bookedSeatNo)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

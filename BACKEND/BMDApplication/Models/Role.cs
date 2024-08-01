@@ -1,11 +1,16 @@
-﻿namespace BMDApplication.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BMDApplication.Models
 {
     public class Role
     {
-        public int RoleId { get; set; }
-        public string? RoleName { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int roleId { get; set; }
 
-        public ICollection<User> Users { get; set; } = new List<User>();
+        public string? roleName { get; set; }
+
+        public ICollection<User> users { get; set; } = new List<User>();
     }
-
 }

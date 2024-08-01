@@ -24,171 +24,181 @@ namespace BMDApplication.Migrations
 
             modelBuilder.Entity("BMDApplication.Models.Booking", b =>
                 {
-                    b.Property<int>("BookingId")
+                    b.Property<int>("bookingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("BookingId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("bookingId"));
 
-                    b.Property<int>("BookedBy")
+                    b.Property<int>("bookedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("BookedDate")
+                    b.Property<DateTime>("bookedDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("BookedFloorNo")
+                    b.Property<int>("bookedFloorNo")
                         .HasColumnType("int");
 
-                    b.Property<int>("BookedFor")
+                    b.Property<int>("bookedFor")
                         .HasColumnType("int");
 
-                    b.Property<int>("BookedSeatNo")
+                    b.Property<int>("bookedSeatNo")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime>("updateDate")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("BookingId");
+                    b.HasKey("bookingId");
 
-                    b.HasIndex("BookedBy");
+                    b.HasIndex("bookedBy");
 
-                    b.HasIndex("BookedSeatNo");
+                    b.HasIndex("bookedFor");
 
-                    b.ToTable("Bookings");
+                    b.HasIndex("bookedSeatNo");
+
+                    b.ToTable("bookings");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.Role", b =>
                 {
-                    b.Property<int>("RoleId")
+                    b.Property<int>("roleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("RoleId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("roleId"));
 
-                    b.Property<string>("RoleName")
+                    b.Property<string>("roleName")
                         .HasColumnType("longtext");
 
-                    b.HasKey("RoleId");
+                    b.HasKey("roleId");
 
-                    b.ToTable("Roles");
+                    b.ToTable("roles");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.Seat", b =>
                 {
-                    b.Property<int>("SeatId")
+                    b.Property<int>("seatId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("SeatId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("seatId"));
 
-                    b.Property<string>("CurrentStatus")
+                    b.Property<string>("currentStatus")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("SeatFloor")
+                    b.Property<int>("seatFloor")
                         .HasColumnType("int");
 
-                    b.Property<string>("SeatName")
+                    b.Property<string>("seatName")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("SeatType")
+                    b.Property<string>("seatType")
                         .HasColumnType("longtext");
 
-                    b.HasKey("SeatId");
+                    b.HasKey("seatId");
 
-                    b.ToTable("Seats");
+                    b.ToTable("seats");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("userId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("userId"));
 
-                    b.Property<string>("EmailId")
+                    b.Property<string>("emailId")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("firstName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("lastName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("password")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("PhoneNo")
+                    b.Property<string>("phoneNo")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("RoleFrequency")
+                    b.Property<string>("roleFrequency")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("RoleId")
+                    b.Property<int>("roleId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId");
+                    b.HasKey("userId");
 
-                    b.HasIndex("RoleId");
+                    b.HasIndex("roleId");
 
-                    b.ToTable("BMDUsers");
+                    b.ToTable("users");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.Booking", b =>
                 {
-                    b.HasOne("BMDApplication.Models.User", "BookedByUser")
-                        .WithMany("Bookings")
-                        .HasForeignKey("BookedBy")
+                    b.HasOne("BMDApplication.Models.User", "bookedByUser")
+                        .WithMany("bookings")
+                        .HasForeignKey("bookedBy")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("BMDApplication.Models.Seat", "BookedSeat")
-                        .WithMany("Bookings")
-                        .HasForeignKey("BookedSeatNo")
+                    b.HasOne("BMDApplication.Models.User", "bookedForUser")
+                        .WithMany()
+                        .HasForeignKey("bookedFor")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("BookedByUser");
+                    b.HasOne("BMDApplication.Models.Seat", "bookedSeat")
+                        .WithMany("bookings")
+                        .HasForeignKey("bookedSeatNo")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.Navigation("BookedSeat");
+                    b.Navigation("bookedByUser");
+
+                    b.Navigation("bookedForUser");
+
+                    b.Navigation("bookedSeat");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.User", b =>
                 {
-                    b.HasOne("BMDApplication.Models.Role", "Role")
-                        .WithMany("Users")
-                        .HasForeignKey("RoleId")
+                    b.HasOne("BMDApplication.Models.Role", "role")
+                        .WithMany("users")
+                        .HasForeignKey("roleId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Role");
+                    b.Navigation("role");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.Role", b =>
                 {
-                    b.Navigation("Users");
+                    b.Navigation("users");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.Seat", b =>
                 {
-                    b.Navigation("Bookings");
+                    b.Navigation("bookings");
                 });
 
             modelBuilder.Entity("BMDApplication.Models.User", b =>
                 {
-                    b.Navigation("Bookings");
+                    b.Navigation("bookings");
                 });
 #pragma warning restore 612, 618
         }
