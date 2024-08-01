@@ -14,25 +14,47 @@ const AddUser = () => {
     floor: "",
     seatName: "",
   };
+
   const [formData, setFormData] = useState(initialFormData);
   const [roles, setRoles] = useState([]);
+  const [seatNames, setSeatNames] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchRoles = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/api/role`);
         setRoles(response.data);
-        console.log("fetchdata:", response);
+        console.log("Roles fetched:", response);
       } catch (error) {
         console.log("Error fetching roles: ", error);
       }
     };
 
-    fetchData();
+    fetchRoles();
   }, []);
-  const handleChange = (e) => {
+
+  const handleChange = async (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    if (name === "floor" && value) {
+      console.log("Floor selected:", value);
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/api/seat/${value}`
+        );
+        console.log("Floor-wise Seats:", response.data);
+        setSeatNames(response.data);
+        setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
+      } catch (error) {
+        console.log("Error fetching seats:", error);
+        setSeatNames([]);
+        setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
+      }
+    } else if (name === "floor" && !value) {
+      setSeatNames([]);
+      setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -67,10 +89,12 @@ const AddUser = () => {
     toast.success("User Created successfully!");
 
     setFormData(initialFormData);
+    setSeatNames([]);
   };
 
   const handleReset = () => {
     setFormData(initialFormData);
+    setSeatNames([]);
   };
   const handleClose = () => {
     console.log("Form Closed");
@@ -179,12 +203,14 @@ const AddUser = () => {
             name="seatName"
             value={formData.seatName}
             onChange={handleChange}
+            disabled={!formData.floor}
           >
             <option value="">Select Seat Name</option>
-            <option value="A1">Seat A1</option>
-            <option value="A2">Seat A2</option>
-            <option value="B1">Seat B1</option>
-            <option value="B2">Seat B2</option>
+            {seatNames.map((seat) => (
+              <option key={seat.seatId} value={seat.seatName}>
+                {seat.seatName}
+              </option>
+            ))}
           </select>
         </div>
         <div className="d-flex justify-content-between">
