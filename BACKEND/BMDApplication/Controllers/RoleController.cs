@@ -15,7 +15,6 @@ namespace BMDApplication.Controllers
 
        
         [HttpGet]
-        [Route("getby")]
         public IActionResult Getby() {
             Console.WriteLine("in getby");
             try
