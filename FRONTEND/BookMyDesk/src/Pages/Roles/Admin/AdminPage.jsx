@@ -1,9 +1,8 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import AdminSideNav from "../../../Components/adminPage/Navbar/side_nav/AdminSideNav";
 import AdminTopNav from "../../../Components/adminPage/Navbar/top_nav/AdminTopNav";
-import AddUser from '../../../Components/adminPage/AddUser';
 import styles from "./AdminPage.module.css"; // Ensure CSS module has correct layout styles
-
 
 const AdminPage = () => {
   return (
@@ -12,8 +11,7 @@ const AdminPage = () => {
       <div className={styles.mainContentWrapper}>
         <AdminSideNav />
         <div className={styles.mainContent}>
-          {/* Add main content here */}
-          <AddUser/>
+          <Outlet /> {/* This will render the content based on the route */}
         </div>
       </div>
     </div>
