@@ -1,4 +1,8 @@
 using BMDApplication.Data;
+using BMDApplication.Repositories.Implementations;
+using BMDApplication.Repositories.Interfaces;
+using BMDApplication.Services.Implementations;
+using BMDApplication.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +26,10 @@ builder.Services.AddCors(options =>
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
+
+// Register repositories and services
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IRoleService, RoleService>();
 
 var app = builder.Build();
 

@@ -1,6 +1,8 @@
-﻿using BMDApplication.Data;
-using Microsoft.AspNetCore.Http;
+﻿// Controllers/RoleController.cs
 using Microsoft.AspNetCore.Mvc;
+using BMDApplication.Services.Interfaces;
+using BMDApplication.Models;
+
 
 namespace BMDApplication.Controllers
 {
@@ -8,32 +10,22 @@ namespace BMDApplication.Controllers
     [ApiController]
     public class RoleController : ControllerBase
     {
-        private readonly BMDDbContext _context;
-        public RoleController(BMDDbContext context)
-        {
-            _context = context;
-        }
+        private readonly IRoleService _roleService;
 
+        public RoleController(IRoleService roleService)
+        {
+            _roleService = roleService;
+        }
 
         [HttpGet]
-        public IActionResult getAllRoles()
+        public ActionResult<List<Role>> getAllRoles()
         {
-            Console.WriteLine("in getby");
-            try
+            var roles = _roleService.getAllRoles();
+            if (roles == null || roles.Count == 0)
             {
-                var roles = _context.roles.ToList();
-                if (roles == null)
-                {
-                    return NotFound("Roles not found");
-                }
-                return Ok(roles);
+                return NotFound("No roles found.");
             }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
+            return Ok(roles);
         }
-        
-
     }
 }
