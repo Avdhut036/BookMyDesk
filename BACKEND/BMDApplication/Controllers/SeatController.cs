@@ -13,6 +13,24 @@ namespace BMDApplication.Controllers
         {
             _context = context;
         }
+        [HttpGet("{floorNo}")]
+        public IActionResult getSeatByFloorNo(int floorNo)
+        {
+            try
+            {
+                var seats = _context.Seats.Where(s => s.SeatFloor == floorNo).ToList();
+                if (seats == null || seats.Count == 0)
+                {
+                    return NotFound($"No seats found for floor number {floorNo}");
+                }
+                return Ok(seats);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost]
         public IActionResult addSeat(Seat seat)
         {
