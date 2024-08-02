@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMDApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fb28b923b3bdc7baaeb71aeaf6f55bbbf23d991")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11ba0aa7abd35d40c0c201497566777e05ca4d01")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMDApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMDApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

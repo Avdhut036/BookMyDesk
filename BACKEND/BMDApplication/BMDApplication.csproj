@@ -24,10 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\DTOs\" />
     <Folder Include="Mappings\" />
     <Folder Include="Helpers\" />
     <Folder Include="Configurations\" />
+    <Folder Include="Models\DTOs\" />
   </ItemGroup>
 
 </Project>
