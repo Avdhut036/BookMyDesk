@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BMDApplication.Migrations
 {
     [DbContext(typeof(BMDDbContext))]
-    [Migration("20240801081518_bookmydeskinitial")]
-    partial class bookmydeskinitial
+    [Migration("20240802113728_BookMyDeskInitial")]
+    partial class BookMyDeskInitial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

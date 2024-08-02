@@ -1,8 +1,8 @@
 ﻿using BMDApplication.Models;
 
-namespace BMDApplication.Services.Interfaces
+namespace BMDApplication.Repositories.Interfaces
 {
-    public interface IUserService
+    public interface IUserRepository
     {
         IEnumerable<User> GetAllUsers();
         IEnumerable<EmployeeDto> GetEmployeeTable();

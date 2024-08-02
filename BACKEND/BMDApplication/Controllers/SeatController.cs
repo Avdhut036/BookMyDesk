@@ -18,12 +18,14 @@ namespace BMDApplication.Controllers
         public IActionResult getSeatByFloorNo(int floorNo)
         {
             IEnumerable<Seat> seats = _seatService.getSeatByFloorNo(floorNo);
-            if (seats == null )
-            {
-                return NotFound($"No seats found for floor number {floorNo}");
+            
+                if (seats == null )
+                {
+                    return NotFound($"No seats found for floor number {floorNo}");
+                }
+                return Ok(seats);
             }
-            return Ok(seats);
-        }
+          
 
        /* [HttpGet("{floorNo}")]
         public ActionResult getSeatByFloorNo(int floorNo)

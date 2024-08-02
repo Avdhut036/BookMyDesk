@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BMDApplication.Migrations
 {
     /// <inheritdoc />
-    public partial class bookmydeskinitial : Migration
+    public partial class BookMyDeskInitial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
