@@ -432,3 +432,14 @@ D:\Training( vijay)\dotnetWork\GitRepo\BookMyDesk\BACKEND\BMDApplication\obj\Deb
 D:\Training( vijay)\dotnetWork\GitRepo\BookMyDesk\BACKEND\BMDApplication\obj\Debug\net8.0\BMDApplication.pdb
 D:\Training( vijay)\dotnetWork\GitRepo\BookMyDesk\BACKEND\BMDApplication\obj\Debug\net8.0\BMDApplication.genruntimeconfig.cache
 D:\Training( vijay)\dotnetWork\GitRepo\BookMyDesk\BACKEND\BMDApplication\obj\Debug\net8.0\ref\BMDApplication.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\BMDApplication.exe
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\BMDApplication.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\MySqlConnector.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\KaranP\new git\BookMyDesk\BACKEND\BMDApplication\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
