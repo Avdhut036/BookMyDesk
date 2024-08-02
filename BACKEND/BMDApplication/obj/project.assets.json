@@ -5476,19 +5476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
       "projectUniqueName": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
       "projectName": "BMDApplication",
       "projectPath": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
       "packagesPath": "C:\\Users\\siddhatech\\.nuget\\packages\\",
       "outputPath": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\obj\\",
-=======
-      "projectUniqueName": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
-      "projectName": "BMDApplication",
-      "projectPath": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
-      "packagesPath": "C:\\Users\\Siddhatech\\.nuget\\packages\\",
-      "outputPath": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\siddhatech\\AppData\\Roaming\\NuGet\\NuGet.Config",

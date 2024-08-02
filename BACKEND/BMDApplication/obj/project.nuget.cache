@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
   "dgSpecHash": "M1Q2Fo9GNFk=",
   "success": true,
   "projectFilePath": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
-=======
-  "dgSpecHash": "hl4OogtYaA0=",
-  "success": true,
-  "projectFilePath": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\siddhatech\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\siddhatech\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
