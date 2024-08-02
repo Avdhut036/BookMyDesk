@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\",
   "Documents": [
     {
@@ -13,6 +14,97 @@
     {
       "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|c:\\karanp\\new git\\bookmydesk\\backend\\bmdapplication\\controllers\\seatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:controllers\\seatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\services\\implementations\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:services\\implementations\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\services\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:services\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\repositories\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:repositories\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\repositories\\implementations\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:repositories\\implementations\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\models\\bookinghistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:models\\bookinghistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\repositories\\interfaces\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:repositories\\interfaces\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\controllers\\seatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:controllers\\seatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\services\\implementations\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:services\\implementations\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\repositories\\implementations\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:repositories\\implementations\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\data\\bmddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:data\\bmddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|d:\\training( vijay)\\dotnetwork\\gitrepo\\bookmydesk\\backend\\bmdapplication\\bmdapplication.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{32437579-E897-4C0B-94B5-E6AA914D7F43}|BMDApplication.csproj|solutionrelative:bmdapplication.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -22,6 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -35,10 +128,26 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T06:45:49.984Z",
+=======
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBookingRepository.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IBookingRepository.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IBookingRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:57:37.074Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 1,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Implementations\\RoleRepository.cs",
@@ -48,11 +157,23 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T06:45:46.521Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Implementations\\BookingService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\BookingService.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Implementations\\BookingService.cs",
+              "RelativeToolTip": "Services\\Implementations\\BookingService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:17:28.933Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< Updated upstream
               "Title": "SeatController.cs",
               "DocumentMoniker": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\SeatController.cs",
               "RelativeDocumentMoniker": "Controllers\\SeatController.cs",
@@ -61,6 +182,263 @@
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T06:43:30.032Z",
+=======
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Interfaces\\IBookingService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IBookingService.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Interfaces\\IBookingService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IBookingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:03:31.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Controllers\\BookingController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:53:41.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Implementations\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\BookingRepository.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Implementations\\BookingRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\BookingRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBIAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:01:50.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRoleRepository.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Interfaces\\IRoleRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IRoleRepository.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Interfaces\\IRoleRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IRoleRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:34:12.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingHistoryDTO.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\BookingHistoryDTO.cs",
+              "RelativeDocumentMoniker": "Models\\BookingHistoryDTO.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\BookingHistoryDTO.cs",
+              "RelativeToolTip": "Models\\BookingHistoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T11:04:26.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SeatController.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\SeatController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SeatController.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\SeatController.cs",
+              "RelativeToolTip": "Controllers\\SeatController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:34:39.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "Controllers\\RoleController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:34:21.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Seat.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\Seat.cs",
+              "RelativeDocumentMoniker": "Models\\Seat.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\Seat.cs",
+              "RelativeToolTip": "Models\\Seat.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:26:07.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Implementations\\RoleService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\RoleService.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Implementations\\RoleService.cs",
+              "RelativeToolTip": "Services\\Implementations\\RoleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:35.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Implementations\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\RoleRepository.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Repositories\\Implementations\\RoleRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\RoleRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:34:04.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IRoleService.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IRoleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:21:21.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:25:36.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:27:44.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:30:18.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BMDDbContext.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Data\\BMDDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\BMDDbContext.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Data\\BMDDbContext.cs",
+              "RelativeToolTip": "Data\\BMDDbContext.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAowCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:27:11.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAUwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:26:21.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:25:58.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-02T07:06:52.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-02T07:06:48.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BMDApplication.http",
+              "DocumentMoniker": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.http",
+              "RelativeDocumentMoniker": "BMDApplication.http",
+              "ToolTip": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.http",
+              "RelativeToolTip": "BMDApplication.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-08-02T07:06:43.684Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             }
           ]
