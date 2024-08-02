@@ -18,7 +18,7 @@ namespace BMDApplication.Controllers
         {
             try
             {
-                var seats = _context.Seats.Where(s => s.SeatFloor == floorNo).ToList();
+                var seats = _context.seats.Where(s => s.seatFloor == floorNo).ToList();
                 if (seats == null || seats.Count == 0)
                 {
                     return NotFound($"No seats found for floor number {floorNo}");

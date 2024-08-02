@@ -1,40 +1,45 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import axios from 'axios'; // Import axios
 import { Box, Typography, TextField, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel, TablePagination, Paper } from '@mui/material';
 
-
+// Define table columns according to the new data format
 const columns = [
   { id: 'id', label: 'ID', width: 90 },
-  { id: 'name', label: 'Name', width: 150 },
+  { id: 'name', label: 'Name', width: 200 },
   { id: 'email', label: 'Email', width: 250 },
   { id: 'floor', label: 'Floor', width: 70 },
   { id: 'seatName', label: 'Seat Name', width: 150 },
-  { id: 'role', label: 'Role', width: 120 },
-  { id: 'type', label: 'Type', width: 100 },
-  { id: 'credits', label: 'Cr', width: 70 },
-  { id: 'absentStart', label: 'Absent Start Date', width: 180 },
-  { id: 'absentEnd', label: 'Absent End Date', width: 180 },
-];
-
-// Sample rows data
-const initialRows = [
-  { id: 1, name: 'Alice Johnson', email: 'alice.johnson@example.com', floor: '1', seatName: 'A1', role: 'Manager', type: 'Full-time', credits: 5, absentStart: '2024-01-01', absentEnd: '2024-01-10' },
-  { id: 2, name: 'Bob Smith', email: 'bob.smith@example.com', floor: '2', seatName: 'B2', role: 'Developer', type: 'Contract', credits: 3, absentStart: '2024-02-01', absentEnd: '2024-02-05' },
-  { id: 3, name: 'Charlie Brown', email: 'charlie.brown@example.com', floor: '3', seatName: 'C3', role: 'Designer', type: 'Part-time', credits: 2, absentStart: '2024-03-01', absentEnd: '2024-03-10' },
-
+  { id: 'roleName', label: 'Role Name', width: 150 },
+  { id: 'roleFrequency', label: 'Role Frequency', width: 150 }
 ];
 
 const EmployeesTable = () => {
   const [search, setSearch] = useState('');
-  const [rows, setRows] = useState(initialRows);
+  const [rows, setRows] = useState([]);
   const [orderDirection, setOrderDirection] = useState('asc');
-  const [orderBy, setOrderBy] = useState('name');
+  const [orderBy, setOrderBy] = useState('id');
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  // Filter rows based on search query (by id and name)
+  // Fetch data from the API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/User/employeetable');
+        setRows(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Filter rows based on search query
   const filteredRows = useMemo(() => {
     return rows.filter(row =>
-      row.id.toString().includes(search) || row.name.toLowerCase().includes(search.toLowerCase())
+      row.id.toString().includes(search) ||
+      row.name.toLowerCase().includes(search.toLowerCase())
     );
   }, [search, rows]);
 
