@@ -5471,24 +5471,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Siddhatech\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\siddhatech\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Avdhut\\DOT NET\\BMD DOTNET REACT\\github\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
+      "projectUniqueName": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
       "projectName": "BMDApplication",
-      "projectPath": "D:\\Avdhut\\DOT NET\\BMD DOTNET REACT\\github\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
-      "packagesPath": "C:\\Users\\Siddhatech\\.nuget\\packages\\",
-      "outputPath": "D:\\Avdhut\\DOT NET\\BMD DOTNET REACT\\github\\BookMyDesk\\BACKEND\\BMDApplication\\obj\\",
+      "projectPath": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
+      "packagesPath": "C:\\Users\\siddhatech\\.nuget\\packages\\",
+      "outputPath": "C:\\KaranP\\new git\\BookMyDesk\\BACKEND\\BMDApplication\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Siddhatech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\siddhatech\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
