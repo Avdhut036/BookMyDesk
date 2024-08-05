@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "An3WY3ISLx4=",
+  "dgSpecHash": "hl4OogtYaA0=",
   "success": true,
-  "projectFilePath": "D:\\Avdhut\\DOT NET\\BMD DOTNET REACT\\github\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
+  "projectFilePath": "D:\\Training( vijay)\\dotnetWork\\GitRepo\\BookMyDesk\\BACKEND\\BMDApplication\\BMDApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Siddhatech\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Siddhatech\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
