@@ -17,16 +17,16 @@ namespace BMDApplication.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<User>> GetAllUsers()
+        public ActionResult<IEnumerable<User>> getAllUsers()
         {
-            var users = _userService.GetAllUsers();
+            var users = _userService.getAllUsers();
             return Ok(users);
         }
 
         [HttpGet("employeetable")]
-        public ActionResult<IEnumerable<User>> GetEmployeeTable()
+        public ActionResult<IEnumerable<User>> getEmployeeTable()
         {
-            var employees = _userService.GetEmployeeTable();
+            var employees = _userService.getEmployeeTable();
             return Ok(employees);
         }
     }

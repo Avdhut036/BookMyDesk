@@ -12,14 +12,14 @@ namespace BMDApplication.Services.Implementations
         {
             _userRepository = userRepository;
         }
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<User> getAllUsers()
         {
 
-        return _userRepository.GetAllUsers();
+        return _userRepository.getAllUsers();
         }
 
-        public IEnumerable<EmployeeDto> GetEmployeeTable() { 
-            return _userRepository.GetEmployeeTable();
+        public IEnumerable<EmployeeDto> getEmployeeTable() { 
+            return _userRepository.getEmployeeTable();
         }
 
     }

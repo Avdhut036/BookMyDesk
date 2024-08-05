@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMDApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31aa00b4a46a8d6965b99a4293da6e0bde5362b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f82014d8fc0758a1c65cd4d3d11257726144991")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMDApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMDApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

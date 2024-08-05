@@ -1,0 +1,46 @@
+# Ignore node_modules in the frontend folder
+/FRONTEND/BookMyDesk/node_modules/
+
+# Ignore build artifacts for React
+/FRONTEND/BookMyDesk/build/
+
+# Ignore .env files for security (adjust if necessary)
+/FRONTEND/BookMyDesk/.env
+BACKEND/BMDApplication/.env
+
+# Ignore bin directories under BACKEND/BMDApplication
+BACKEND/BMDApplication/bin/
+
+# Ignore obj directories under BACKEND/BMDApplication
+BACKEND/BMDApplication/obj/
+
+# Ignore .vs directories under BACKEND/BMDApplication
+BACKEND/BMDApplication/.vs/
+
+BACKEND/BMDApplication/out/
+
+BACKEND/BMDApplication/publish/
+
+# Ignore user-specific files for IDEs
+/.vscode/
+/.idea/
+/*.suo
+/*.user
+/*.userosscache
+/*.suo
+/*.ncb
+/*.sdf
+/*.dbmdl
+/*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build results
+BACKEND/BMDApplication/[Bb]uild/
+BACKEND/BMDApplication/[Bb]uildOutput/
+BACKEND/BMDApplication/[Dd]ebug/
+BACKEND/BMDApplication/[Dd]ebugPublic/
+BACKEND/BMDApplication/[Rr]elease/
+BACKEND/BMDApplication/[Rr]eleases/

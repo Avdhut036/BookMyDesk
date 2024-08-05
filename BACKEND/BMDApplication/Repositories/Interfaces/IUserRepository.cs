@@ -4,7 +4,7 @@ namespace BMDApplication.Repositories.Interfaces
 {
     public interface IUserRepository
     {
-        IEnumerable<User> GetAllUsers();
-        IEnumerable<EmployeeDto> GetEmployeeTable();
+        IEnumerable<User> getAllUsers();
+        IEnumerable<EmployeeDto> getEmployeeTable();
     }
 }
