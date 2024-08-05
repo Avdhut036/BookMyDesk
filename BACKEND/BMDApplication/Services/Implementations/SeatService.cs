@@ -25,6 +25,13 @@ namespace BMDApplication.Services.Implementations
         {
             return _seatRepository.getSeatById(seatId);
         }
+
+        public Seat? getSeatByName(string seatName)
+        {
+            return _seatRepository.getSeatByName(seatName);
+        }
+
+
     }
 
 
