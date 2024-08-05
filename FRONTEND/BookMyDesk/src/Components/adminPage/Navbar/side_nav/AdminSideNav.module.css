@@ -1,0 +1,10 @@
+/* AdminSideNav.module.css */
+.logo {
+    width: 50%;
+    max-width: 200px;
+  }
+  
+  .subMenu {
+    padding-left: 16px;
+  }
+  
