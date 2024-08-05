@@ -18,6 +18,7 @@ const AddUser = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [roles, setRoles] = useState([]);
   const [seatNames, setSeatNames] = useState([]);
+  const [seatId, setSeatId] = useState(null);
 
   useEffect(() => {
     const fetchRoles = async () => {
@@ -55,13 +56,27 @@ const AddUser = () => {
       setSeatNames([]);
       setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
     }
+
+    if (name === "seatName" && value) {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/api/Seat/seatId/${value}/${formData.floor}`
+        );
+        console.log("Seat ID:", response.data.seatId);
+        setSeatId(response.data.seatId);
+        
+      } catch (error) {
+        console.log("Error fetching seat ID:", error);
+        setSeatId(null);
+      }
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { fname, lname, email, password, role, frequency, floor, seatName } =
       formData;
-
+    console.log("seatid:"+seatId+". floor:"+floor);
     //Check if all fields are filled
     if (
       !fname ||
@@ -86,7 +101,7 @@ const AddUser = () => {
     const fullEmail = email + "@siddhatech.com";
 
     try {
-      const response = await axios.post('http://localhost:5000/api/User', {
+      const response = await axios.post("http://localhost:5000/api/User", {
         ...formData,
         email: fullEmail,
       });

@@ -9,7 +9,7 @@ namespace BMDApplication.Services.Interfaces
         IEnumerable<Seat> getSeatByFloorNo(int floorNo);
 
         Seat? getSeatById(int seatId);
-        Seat? getSeatByName(string name);   
+        Seat? getSeatByName(string name, int seatFloor );   
 
     }
 }
