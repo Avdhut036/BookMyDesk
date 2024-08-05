@@ -222,125 +222,38 @@ VALUES
 
 
 ///BOOKINGS TABLE
--- Booking 1
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-01 09:30:00', 1, 3, 7, '2024-08-01 09:00:00', 15);
-
--- Booking 2
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-01 11:00:00', 1, 6, 2, '2024-08-01 10:45:00', 20);
-
--- Booking 3
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-02 10:00:00', 1, 1, 10, '2024-08-02 09:30:00', 1);
-
--- Booking 4
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-02 13:30:00', 1, 8, 4, '2024-08-02 12:00:00', 22);
-
--- Booking 5
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-03 08:45:00', 1, 3, 6, '2024-08-03 08:00:00', 13);
-
--- Booking 6
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-03 15:00:00', 1, 8, 12, '2024-08-03 14:00:00', 8);
-
--- Booking 7
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-04 09:00:00', 1, 6, 13, '2024-08-04 08:00:00', 16);
-
--- Booking 8
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-04 12:30:00', 1, 1, 8, '2024-08-04 11:00:00', 18);
-
--- Booking 9
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-05 10:30:00', 1, 8, 15, '2024-08-05 09:15:00', 5);
-
--- Booking 10
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-05 14:00:00', 1, 6, 12, '2024-08-05 13:00:00', 21);
-
--- Booking 11
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-06 11:00:00', 1, 3, 1, '2024-08-06 10:00:00', 11);
-
--- Booking 12
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-06 13:30:00', 1, 8, 5, '2024-08-06 12:00:00', 7);
-
--- Booking 13
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-07 09:00:00', 1, 1, 14, '2024-08-07 08:00:00', 9);
-
--- Booking 14
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-07 12:30:00', 1, 6, 16, '2024-08-07 11:00:00', 23);
-
--- Booking 15
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-08 10:00:00', 1, 8, 3, '2024-08-08 09:00:00', 2);
-
--- Booking 16
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-08 14:00:00', 1, 1, 9, '2024-08-08 13:00:00', 6);
-
--- Booking 17
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-09 08:30:00', 1, 6, 10, '2024-08-09 07:30:00', 24);
-
--- Booking 18
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-09 11:30:00', 1, 8, 12, '2024-08-09 10:30:00', 25);
-
--- Booking 19
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-10 09:00:00', 1, 3, 4, '2024-08-10 08:00:00', 30);
-
--- Booking 20
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-10 14:00:00', 1, 8, 15, '2024-08-10 13:00:00', 4);
-
--- Booking 21
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-11 08:00:00', 1, 6, 2, '2024-08-11 07:00:00', 17);
-
--- Booking 22
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-11 11:30:00', 1, 8, 13, '2024-08-11 10:00:00', 19);
-
--- Booking 23
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-12 09:45:00', 1, 1, 6, '2024-08-12 08:30:00', 26);
-
--- Booking 24
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-12 13:00:00', 1, 3, 1, '2024-08-12 12:00:00', 27);
-
--- Booking 25
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-13 10:30:00', 1, 8, 3, '2024-08-13 09:00:00', 28);
-
--- Booking 26
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-13 12:00:00', 1, 6, 7, '2024-08-13 11:00:00', 29);
-
--- Booking 27
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-14 08:30:00', 1, 3, 11, '2024-08-14 07:30:00', 12);
-
--- Booking 28
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-14 11:00:00', 1, 8, 5, '2024-08-14 10:00:00', 14);
-
--- Booking 29
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-15 09:30:00', 1, 1, 16, '2024-08-15 08:00:00', 21);
-
--- Booking 30
-INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo)
-VALUES ('2024-08-15 13:30:00', 1, 6, 2, '2024-08-15 12:00:00', 5);
+-- Daily Employees' seats are booked once for Week 1
+INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo) VALUES
+('2024-07-29 09:00:00', 1, 1, 1, '2024-07-29 09:00:00', 1), -- Admin's seat booked by Admin
+('2024-07-29 09:00:00', 1, 1, 2, '2024-07-29 09:00:00', 2), -- Another admin's seat booked by Admin
+('2024-07-29 09:00:00', 1, 1, 3, '2024-07-29 09:00:00', 3), -- Another admin's seat booked by Admin
+('2024-07-29 09:00:00', 1, 1, 4, '2024-07-29 09:00:00', 4), -- Another admin's seat booked by Admin
+('2024-07-29 09:00:00', 1, 1, 5, '2024-07-29 09:00:00', 5); -- Another admin's seat booked by Admin
 
 
+-- Weekly employee 1 (userId 11) books their own seat or by Admin FOR WEEK 1
+INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo) VALUES
+('2024-07-29 10:00:00', 1, 11, 11, '2024-07-29 10:00:00', 6), -- Weekly employee books own seat
+('2024-07-31 10:00:00', 1, 11, 11, '2024-07-31 10:00:00', 6), -- Weekly employee books own seat
+('2024-08-02 10:00:00', 1, 11, 11, '2024-08-02 10:00:00', 6); -- Weekly employee books own seat
+
+-- Weekly employee 2 (userId 12) booked by Admin or by themselves
+INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo) VALUES
+('2024-07-30 11:00:00', 1, 1, 12, '2024-07-30 11:00:00', 7), -- Admin books for Weekly employee
+('2024-08-01 11:00:00', 1, 12, 12, '2024-08-01 11:00:00', 7), -- Weekly employee books own seat
+('2024-08-02 11:00:00', 1, 1, 12, '2024-08-02 11:00:00', 7); -- Admin books for Weekly employee
+
+
+
+-- Weekly employee 1 (userId 11) books their own seat or by Admin FOR WEEK 2
+INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo) VALUES
+('2024-08-05 10:00:00', 1, 11, 11, '2024-08-05 10:00:00', 6), -- Weekly employee books own seat
+('2024-08-07 10:00:00', 1, 1, 11, '2024-08-07 10:00:00', 6), -- Admin books for Weekly employee
+('2024-08-09 10:00:00', 1, 11, 11, '2024-08-09 10:00:00', 6); -- Weekly employee books own seat
+
+-- Weekly employee 2 (userId 12) booked by Admin or by themselves
+INSERT INTO bookings (updateDate, bookedFloorNo, bookedBy, bookedFor, bookedDate, bookedSeatNo) VALUES
+('2024-08-06 11:00:00', 1, 12, 12, '2024-08-06 11:00:00', 7), -- Weekly employee books own seat
+('2024-08-08 11:00:00', 1, 1, 12, '2024-08-08 11:00:00', 7), -- Admin books for Weekly employee
+('2024-08-09 11:00:00', 1, 12, 12, '2024-08-09 11:00:00', 7); -- Weekly employee books own seat
 
