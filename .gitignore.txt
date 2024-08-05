@@ -1,0 +1,39 @@
+# Ignore node_modules in the frontend folder
+/frontend/node_modules/
+
+# Ignore build artifacts for React
+/frontend/build/
+
+# Ignore .env files for security (adjust if necessary)
+/frontend/.env
+/backend/.env
+
+# Ignore .NET Core artifacts in the backend folder
+/backend/**/bin/
+/backend/**/obj/
+/backend/**/out/
+/backend/**/publish/
+
+# Ignore user-specific files for IDEs
+/.vscode/
+/.idea/
+/*.suo
+/*.user
+/*.userosscache
+/*.suo
+/*.ncb
+/*.sdf
+/*.dbmdl
+/*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build results
+/backend/[Bb]uild/
+/backend/[Bb]uildOutput/
+/backend/[Dd]ebug/
+/backend/[Dd]ebugPublic/
+/backend/[Rr]elease/
+/backend/[Rr]eleases/
