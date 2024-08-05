@@ -41,7 +41,7 @@ const AddUser = () => {
       console.log("Floor selected:", value);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/seat/${value}`
+          `http://localhost:5000/api/Seat/byFloor/${value}`
         );
         console.log("Floor-wise Seats:", response.data);
         setSeatNames(response.data);
