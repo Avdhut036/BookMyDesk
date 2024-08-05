@@ -6,20 +6,20 @@
 
 # Ignore .env files for security (adjust if necessary)
 /FRONTEND/BookMyDesk/.env
-BACKEND/BMDApplication/.env
+/BACKEND/BMDApplication/.env
 
 # Ignore bin directories under BACKEND/BMDApplication
-BACKEND/BMDApplication/bin/
+/BACKEND/BMDApplication/bin/
 
 # Ignore obj directories under BACKEND/BMDApplication
-BACKEND/BMDApplication/obj/
+/BACKEND/BMDApplication/obj/
 
 # Ignore .vs directories under BACKEND/BMDApplication
-BACKEND/BMDApplication/.vs/
+/BACKEND/BMDApplication/.vs/
 
-BACKEND/BMDApplication/out/
+/BACKEND/BMDApplication/out/
 
-BACKEND/BMDApplication/publish/
+/BACKEND/BMDApplication/publish/
 
 # Ignore user-specific files for IDEs
 /.vscode/
@@ -38,9 +38,10 @@ BACKEND/BMDApplication/publish/
 Thumbs.db
 
 # Ignore build results
-BACKEND/BMDApplication/[Bb]uild/
-BACKEND/BMDApplication/[Bb]uildOutput/
-BACKEND/BMDApplication/[Dd]ebug/
-BACKEND/BMDApplication/[Dd]ebugPublic/
-BACKEND/BMDApplication/[Rr]elease/
-BACKEND/BMDApplication/[Rr]eleases/
+/BACKEND/BMDApplication/[Bb]uild/
+/BACKEND/BMDApplication/[Bb]uildOutput/
+/BACKEND/BMDApplication/[Dd]ebug/
+/BACKEND/BMDApplication/[Dd]ebugPublic/
+/BACKEND/BMDApplication/[Rr]elease/
+/BACKEND/BMDApplication/[Rr]eleases/
+/BACKEND/BMDApplication/bin
