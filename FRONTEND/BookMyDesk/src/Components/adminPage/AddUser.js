@@ -57,7 +57,7 @@ const AddUser = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { fname, lname, email, password, role, frequency, floor, seatName } =
       formData;
@@ -85,17 +85,27 @@ const AddUser = () => {
     //Concatenate the email domain
     const fullEmail = email + "@siddhatech.com";
 
-    console.log("User Created:", { ...formData, email: fullEmail });
-    toast.success("User Created successfully!");
+    try {
+      const response = await axios.post('http://localhost:5000/api/User', {
+        ...formData,
+        email: fullEmail,
+      });
+      console.log("User Created:", response.data);
+      toast.success("User Created successfully!");
 
-    setFormData(initialFormData);
-    setSeatNames([]);
+      setFormData(initialFormData);
+      setSeatNames([]);
+    } catch (error) {
+      console.error("Error creating user:", error);
+      toast.error("Failed to create user. Please try again.");
+    }
   };
 
   const handleReset = () => {
     setFormData(initialFormData);
     setSeatNames([]);
   };
+
   const handleClose = () => {
     console.log("Form Closed");
   };
