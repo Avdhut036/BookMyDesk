@@ -29,7 +29,7 @@ namespace BMDApplication.Controllers
             return Ok(seat);
         }
 
-        [HttpGet("byFloor/{floorNo}")]//pattern not followed
+        [HttpGet("byFloor/{floorNo}")]//pattern followed
         public IActionResult getSeatByFloorNo(int floorNo)
         {
             IEnumerable<Seat> seats = _seatService.getSeatByFloorNo(floorNo);
@@ -41,7 +41,7 @@ namespace BMDApplication.Controllers
                 return Ok(seats);
             }
 
-   [HttpDelete("{id}")]
+   [HttpDelete("{id}")] //Pattern not followed
    public IActionResult deleteSeatById(int id)
    {
        try
