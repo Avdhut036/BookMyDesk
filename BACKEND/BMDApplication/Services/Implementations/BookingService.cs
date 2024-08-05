@@ -22,9 +22,10 @@ namespace BMDApplication.Services.Implementations
             return bookings.Select(b => new BookingHistoryDTO
             {
                 bookingId = b.bookingId,
-                bookedByName = b.bookedByUser.firstName + " " + b.bookedByUser.lastName,
-                bookedForName = b.bookedForUser.firstName + " " + b.bookedForUser.lastName,
-                seatName = b.bookedSeat.seatName,
+                bookedByName = b.bookedByUser?.firstName + " " + b.bookedByUser?.lastName,
+                bookedForName = b.bookedForUser?.firstName + " " + b.bookedForUser?.lastName,
+                seatName = b.bookedSeat?.seatName,
+                bookingFloorNo = b.bookedFloorNo,
                 bookedDate = b.bookedDate,
                 bookedToDate = b.bookedDate.AddDays(7), 
                 updateDate = b.updateDate
