@@ -1,9 +1,7 @@
 # Ignore node_modules in the frontend folder
 /FRONTEND/BookMyDesk/node_modules/
 
-/BACKEND/BMDApplication/obj
-/BACKEND/BMDApplication/obj/Debug
-BACKEND/BMDApplication/obj/Debug/net8.0/BMDApplication.AssemblyInfo.cs
+# Ignore build artifacts for React
 /FRONTEND/BookMyDesk/build/
 
 # Ignore .env files for security (adjust if necessary)
