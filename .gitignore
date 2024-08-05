@@ -45,3 +45,7 @@ Thumbs.db
 /BACKEND/BMDApplication/[Rr]elease/
 /BACKEND/BMDApplication/[Rr]eleases/
 /BACKEND/BMDApplication/bin
+BACKEND/BMDApplication/obj/Debug/net8.0/BMDApplication.AssemblyInfo.cs
+BACKEND/BMDApplication/obj/Debug/net8.0/BMDApplication.AssemblyInfoInputs.cache
+BACKEND/BMDApplication/obj/Debug/net8.0/BMDApplication.csproj.AssemblyReference.cache
+BACKEND/BMDApplication/obj/Debug/net8.0/BMDApplication.GeneratedMSBuildEditorConfig.editorconfig
