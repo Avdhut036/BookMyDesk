@@ -35,6 +35,12 @@ namespace BMDApplication.Repositories.Implementations
         {
             return _context.seats.FirstOrDefault(s=> s.seatId== seatId);    
         }
+
+        public Seat? getSeatByName(string seatName) { 
+        
+        return _context.seats.FirstOrDefault(s=>s.seatName== seatName);
+        }
+
     }
 }
 

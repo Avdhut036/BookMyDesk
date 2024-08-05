@@ -29,6 +29,22 @@ namespace BMDApplication.Controllers
             return Ok(seat);
         }
 
+        [HttpGet("seatId/{seatName}")]
+        public IActionResult getSeatByName(string seatName) {
+            var seat =_seatService.getSeatByName(seatName);
+
+            if (seat == null)
+            {
+                return NotFound($"seat not found with name{seatName}");
+            }
+            return Ok(seat);    
+        
+        }
+
+
+
+
+
         [HttpGet("byFloor/{floorNo}")]//pattern followed
         public IActionResult getSeatByFloorNo(int floorNo)
         {

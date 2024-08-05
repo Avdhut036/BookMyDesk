@@ -7,6 +7,7 @@ namespace BookMyDesk.Repositories.Interfaces
     {
         IEnumerable<Seat> getSeatByFloorNo(int floorNo);
         Seat? getSeatById(int id);  
+        Seat? getSeatByName(string name);
     }
 }
 
