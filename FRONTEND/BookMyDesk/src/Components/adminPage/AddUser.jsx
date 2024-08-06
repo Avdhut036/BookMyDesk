@@ -23,11 +23,11 @@ const AddUser = () => {
   useEffect(() => {
     const fetchRoles = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/Role`);
+        const response = await axios.get("http://localhost:5000/api/Role");
         setRoles(response.data);
-        console.log("Roles fetched:", response);
       } catch (error) {
-        console.log("Error fetching roles: ", error);
+        console.error("Error fetching roles: ", error);
+        toast.error("Failed to fetch roles.");
       }
     };
 
@@ -39,77 +39,53 @@ const AddUser = () => {
     setFormData({ ...formData, [name]: value });
 
     if (name === "floor" && value) {
-      console.log("Floor selected:", value);
       try {
-        const response = await axios.get(
-          `http://localhost:5000/api/Seat/byFloor/${value}`
-        );
-        console.log("Floor-wise Seats:", response.data);
+        const response = await axios.get(`http://localhost:5000/api/Seat/byFloor/${value}`);
         setSeatNames(response.data);
         setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
       } catch (error) {
-        console.log("Error fetching seats:", error);
+        console.error("Error fetching seats:", error);
         setSeatNames([]);
         setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
+        toast.error("Failed to fetch seats.");
       }
-    } else if (name === "floor" && !value) {
-      setSeatNames([]);
-      setFormData((prevFormData) => ({ ...prevFormData, seatName: "" }));
     }
 
     if (name === "seatName" && value) {
       try {
-        const response = await axios.get(
-          `http://localhost:5000/api/Seat/seatId/${value}/${formData.floor}`
-        );
-        console.log("Seat ID:", response.data.seatId);
+        const response = await axios.get(`http://localhost:5000/api/Seat/seatId/${value}/${formData.floor}`);
         setSeatId(response.data.seatId);
-        
       } catch (error) {
-        console.log("Error fetching seat ID:", error);
+        console.error("Error fetching seat ID:", error);
         setSeatId(null);
+        toast.error("Failed to fetch seat ID.");
       }
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { fname, lname, email, password, role, frequency, floor, seatName } =
-      formData;
-    console.log("seatid:"+seatId+". floor:"+floor);
-    //Check if all fields are filled
-    if (
-      !fname ||
-      !lname ||
-      !email ||
-      !password ||
-      !role ||
-      !frequency ||
-      !floor ||
-      !seatName
-    ) {
+    const { fname, lname, email, password, role, frequency, floor, seatName } = formData;
+
+    if (!fname || !lname || !email || !password || !role || !frequency || !floor || !seatName) {
       toast.error("All fields are required.");
       return;
     }
-    //Validate email format
-    const emailPattern = /^[a-zA-Z0-9.]*$/;
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      toast.error("Email can only contain letters, numbers, and '.'");
+      toast.error("Invalid email format.");
       return;
     }
-    //Concatenate the email domain
     const fullEmail = email + "@siddhatech.com";
 
     try {
-      const response = await axios.post("http://localhost:5000/api/User", {
-        ...formData,
-        email: fullEmail,
-      });
-      console.log("User Created:", response.data);
-      toast.success("User Created successfully!");
-
+      await axios.post("http://localhost:5000/api/User", { ...formData, email: fullEmail });
+      toast.success("User created successfully!");
       setFormData(initialFormData);
       setSeatNames([]);
+      setSeatId(null);
     } catch (error) {
       console.error("Error creating user:", error);
       toast.error("Failed to create user. Please try again.");
@@ -119,10 +95,7 @@ const AddUser = () => {
   const handleReset = () => {
     setFormData(initialFormData);
     setSeatNames([]);
-  };
-
-  const handleClose = () => {
-    console.log("Form Closed");
+    setSeatId(null);
   };
 
   return (
@@ -135,20 +108,22 @@ const AddUser = () => {
       >
         <div className="row mb-3">
           <div className="col-md-6">
-            <label className="form-label">First Name</label>
+            <label htmlFor="fname" className="form-label">First Name</label>
             <input
               type="text"
               className="form-control"
+              id="fname"
               name="fname"
               value={formData.fname}
               onChange={handleChange}
             />
           </div>
           <div className="col-md-6">
-            <label className="form-label">Last Name</label>
+            <label htmlFor="lname" className="form-label">Last Name</label>
             <input
               type="text"
               className="form-control"
+              id="lname"
               name="lname"
               value={formData.lname}
               onChange={handleChange}
@@ -156,11 +131,12 @@ const AddUser = () => {
           </div>
         </div>
         <div className="mb-3">
-          <label className="form-label">Email</label>
+          <label htmlFor="email" className="form-label">Email</label>
           <div className="input-group">
             <input
               type="text"
               className="form-control"
+              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -169,19 +145,21 @@ const AddUser = () => {
           </div>
         </div>
         <div className="mb-3">
-          <label className="form-label">Password</label>
+          <label htmlFor="password" className="form-label">Password</label>
           <input
             type="password"
             className="form-control"
+            id="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
           />
         </div>
         <div className="mb-3">
-          <label className="form-label">Role</label>
+          <label htmlFor="role" className="form-label">Role</label>
           <select
             className="form-select"
+            id="role"
             name="role"
             value={formData.role}
             onChange={handleChange}
@@ -195,23 +173,24 @@ const AddUser = () => {
           </select>
         </div>
         <div className="mb-3">
-          <label className="form-label">Frequency</label>
+          <label htmlFor="frequency" className="form-label">Frequency</label>
           <select
             className="form-select"
+            id="frequency"
             name="frequency"
             value={formData.frequency}
             onChange={handleChange}
           >
-            {" "}
             <option value="">Select Frequency</option>
             <option value="daily">Daily</option>
             <option value="weekly">Weekly</option>
           </select>
         </div>
         <div className="mb-3">
-          <label className="form-label">Floor</label>
+          <label htmlFor="floor" className="form-label">Floor</label>
           <select
             className="form-select"
+            id="floor"
             name="floor"
             value={formData.floor}
             onChange={handleChange}
@@ -222,9 +201,10 @@ const AddUser = () => {
           </select>
         </div>
         <div className="mb-3">
-          <label className="form-label">Seat Name</label>
+          <label htmlFor="seatName" className="form-label">Seat Name</label>
           <select
             className="form-select"
+            id="seatName"
             name="seatName"
             value={formData.seatName}
             onChange={handleChange}
@@ -248,13 +228,6 @@ const AddUser = () => {
             onClick={handleReset}
           >
             Reset
-          </button>
-          <button
-            type="button"
-            className="btn btn-danger"
-            onClick={handleClose}
-          >
-            Close
           </button>
         </div>
       </form>

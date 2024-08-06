@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -19,11 +20,11 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  Checkbox,
-  TextField as MuiTextField
+  Checkbox
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import AddUser from './AddUser'; // Import AddUser component
 
 // Define table columns
 const columns = [
@@ -43,11 +44,14 @@ const EmployeesTable = () => {
   const [orderBy, setOrderBy] = useState('id');
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(7);
-  const [selectedRow, setSelectedRow] = useState(null);
   const [selectedRows, setSelectedRows] = useState([]);
   const [editDialogOpen, setEditDialogOpen] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [addUserDialogOpen, setAddUserDialogOpen] = useState(false);
   const [formData, setFormData] = useState({});
+  const [selectedRow, setSelectedRow] = useState(null);
+
+  const navigate = useNavigate();
 
   // Fetch data from the API
   useEffect(() => {
@@ -123,16 +127,26 @@ const EmployeesTable = () => {
     setDeleteDialogOpen(true);
   };
 
-  const handleDeleteConfirmed = () => {
-    // Implement the logic for deleting the user
-    console.log('Delete user:', selectedRow);
-    setDeleteDialogOpen(false);
+  const handleDeleteConfirmed = async () => {
+    try {
+      if (selectedRow) {
+        await axios.delete(`http://localhost:5000/api/User/${selectedRow.id}`);
+        setRows(rows.filter(row => row.id !== selectedRow.id));
+        setDeleteDialogOpen(false);
+      }
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
   };
 
-  const handleEditConfirmed = () => {
-    // Implement the logic for editing the user
-    console.log('Edit user:', formData);
-    setEditDialogOpen(false);
+  const handleEditConfirmed = async () => {
+    try {
+      await axios.put(`http://localhost:5000/api/User/${formData.id}`, formData);
+      setRows(rows.map(row => (row.id === formData.id ? formData : row)));
+      setEditDialogOpen(false);
+    } catch (error) {
+      console.error('Error editing user:', error);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -142,10 +156,14 @@ const EmployeesTable = () => {
     });
   };
 
-  const handleDeleteSelected = () => {
-    // Implement the logic for deleting selected users
-    console.log('Delete selected users:', selectedRows);
-    setSelectedRows([]);
+  const handleDeleteSelected = async () => {
+    try {
+      await Promise.all(selectedRows.map(id => axios.delete(`http://localhost:5000/api/User/${id}`)));
+      setRows(rows.filter(row => !selectedRows.includes(row.id)));
+      setSelectedRows([]);
+    } catch (error) {
+      console.error('Error deleting selected users:', error);
+    }
   };
 
   return (
@@ -165,7 +183,7 @@ const EmployeesTable = () => {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => console.log('Add User')}
+            onClick={() => setAddUserDialogOpen(true)} // Open Add User Dialog
           >
             Add User
           </Button>
@@ -199,7 +217,6 @@ const EmployeesTable = () => {
                     <TableCell
                       key={column.id}
                       sortDirection={orderBy === column.id ? orderDirection : false}
-                      style={{ width: column.width }}
                     >
                       <TableSortLabel
                         active={orderBy === column.id}
@@ -217,7 +234,9 @@ const EmployeesTable = () => {
                 {sortedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
                   <TableRow
                     key={row.id}
-                    sx={{ backgroundColor: selectedRow === row ? '#f5f5f5' : 'inherit' }}
+                    hover
+                    onClick={(event) => handleRowSelect(event, row)}
+                    selected={selectedRows.includes(row.id)}
                   >
                     <TableCell padding="checkbox">
                       <Checkbox
@@ -226,7 +245,9 @@ const EmployeesTable = () => {
                       />
                     </TableCell>
                     {columns.map(column => (
-                      <TableCell key={column.id}>{row[column.id]}</TableCell>
+                      <TableCell key={column.id} sx={{ width: column.width }}>
+                        {row[column.id]}
+                      </TableCell>
                     ))}
                     <TableCell>
                       <Box sx={{ display: 'flex', gap: 1 }}>
@@ -243,32 +264,82 @@ const EmployeesTable = () => {
               </TableBody>
             </Table>
           </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[7]}
-            component="div"
-            count={filteredRows.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
         </Box>
+        <TablePagination
+          rowsPerPageOptions={[5, 7, 10]}
+          component="div"
+          count={filteredRows.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          // Ensure page size remains consistent even with fewer rows
+          backIconButtonProps={{ disabled: page === 0 }}
+          nextIconButtonProps={{ disabled: page >= Math.ceil(filteredRows.length / rowsPerPage) - 1 }}
+        />
       </Box>
 
-      {/* Edit User Dialog */}
+      {/* Edit Dialog */}
       <Dialog open={editDialogOpen} onClose={() => setEditDialogOpen(false)}>
         <DialogTitle>Edit User</DialogTitle>
         <DialogContent>
-          <MuiTextField
-            autoFocus
-            margin="dense"
-            label="Name"
+          <TextField
+            label="ID"
+            name="id"
+            value={formData.id || ''}
+            onChange={handleInputChange}
             fullWidth
+            margin="dense"
+            disabled
+          />
+          <TextField
+            label="Name"
             name="name"
             value={formData.name || ''}
             onChange={handleInputChange}
+            fullWidth
+            margin="dense"
           />
-          {/* Add other form fields as needed */}
+          <TextField
+            label="Email"
+            name="email"
+            value={formData.email || ''}
+            onChange={handleInputChange}
+            fullWidth
+            margin="dense"
+          />
+          <TextField
+            label="Floor"
+            name="floor"
+            value={formData.floor || ''}
+            onChange={handleInputChange}
+            fullWidth
+            margin="dense"
+          />
+          <TextField
+            label="Seat Name"
+            name="seatName"
+            value={formData.seatName || ''}
+            onChange={handleInputChange}
+            fullWidth
+            margin="dense"
+          />
+          <TextField
+            label="Role Name"
+            name="roleName"
+            value={formData.roleName || ''}
+            onChange={handleInputChange}
+            fullWidth
+            margin="dense"
+          />
+          <TextField
+            label="Role Frequency"
+            name="roleFrequency"
+            value={formData.roleFrequency || ''}
+            onChange={handleInputChange}
+            fullWidth
+            margin="dense"
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setEditDialogOpen(false)}>Cancel</Button>
@@ -276,15 +347,26 @@ const EmployeesTable = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Delete User Confirmation Dialog */}
+      {/* Delete Dialog */}
       <Dialog open={deleteDialogOpen} onClose={() => setDeleteDialogOpen(false)}>
         <DialogTitle>Confirm Deletion</DialogTitle>
         <DialogContent>
-          Are you sure you want to delete this user?
+          <Typography>Are you sure you want to delete this user?</Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setDeleteDialogOpen(false)}>Cancel</Button>
           <Button onClick={handleDeleteConfirmed} color="error">Delete</Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Add User Dialog */}
+      <Dialog open={addUserDialogOpen} onClose={() => setAddUserDialogOpen(false)} fullWidth>
+        <DialogTitle>Add User</DialogTitle>
+        <DialogContent>
+          <AddUser onClose={() => setAddUserDialogOpen(false)} />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setAddUserDialogOpen(false)}>Close</Button>
         </DialogActions>
       </Dialog>
     </Paper>
