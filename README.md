@@ -1,11 +1,10 @@
-Certainly! Below is the content formatted for a `README.md` file:
 
-```markdown
+
 # 📚 BookMyDesk
 
 **BookMyDesk** is a web application that allows users to book their desk for the week at the office. Built with React for the frontend and .NET for the backend, this application simplifies desk booking management for organizations, ensuring a smooth and organized workspace.
 
-![BookMyDesk](https://via.placeholder.com/1200x400?text=BookMyDesk) <!-- Placeholder for project image -->
+![BookMyDesk](https://via.placeholder.com/1200x400?text=BookMyDesk) 
 
 ## 🛠 Technologies Used
 
@@ -104,14 +103,3 @@ For more details, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-For any inquiries or support, please reach out to:
-
-- **Email**: [support@bookmydesk.com](mailto:support@bookmydesk.com)
-- **Twitter**: [@BookMyDesk](https://twitter.com/BookMyDesk)
-- **LinkedIn**: [BookMyDesk](https://www.linkedin.com/company/bookmydesk)
-```
-
-You can copy and paste this content into a `README.md` file in your project repository. Make sure to replace placeholder links and contact information with your actual details.
