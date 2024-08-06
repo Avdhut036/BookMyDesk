@@ -16,15 +16,17 @@ import {
   Paper,
   Button,
   IconButton,
+  Checkbox, // Import Checkbox
   Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Checkbox
+  DialogTitle, // Import DialogTitle
+  DialogContent, // Import DialogContent
+  DialogActions // Import DialogActions
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import AddUser from './AddUser'; // Import AddUser component
+import AddUser from './AddUser';
+import EditUserDialog from './EditUserDialog';
+import DeleteUserDialog from './DeleteUserDialog';
 
 // Define table columns
 const columns = [
@@ -51,8 +53,6 @@ const EmployeesTable = () => {
   const [formData, setFormData] = useState({});
   const [selectedRow, setSelectedRow] = useState(null);
 
-  const navigate = useNavigate();
-
   // Fetch data from the API
   useEffect(() => {
     const fetchData = async () => {
@@ -69,9 +69,10 @@ const EmployeesTable = () => {
 
   // Filter rows based on search query
   const filteredRows = useMemo(() => {
+    const query = search.toLowerCase();
     return rows.filter(row =>
       row.id.toString().includes(search) ||
-      row.name.toLowerCase().includes(search.toLowerCase())
+      row.name.toLowerCase().includes(query)
     );
   }, [search, rows]);
 
@@ -101,8 +102,9 @@ const EmployeesTable = () => {
 
   // Handle sorting
   const handleRequestSort = (property) => {
-    const isAscending = orderBy === property && orderDirection === 'asc';
-    setOrderDirection(isAscending ? 'desc' : 'asc');
+    setOrderDirection((prevOrder) =>
+      orderBy === property && prevOrder === 'asc' ? 'desc' : 'asc'
+    );
     setOrderBy(property);
   };
 
@@ -110,9 +112,11 @@ const EmployeesTable = () => {
   const handleRowSelect = (event, row) => {
     const selectedIndex = selectedRows.indexOf(row.id);
     if (selectedIndex === -1) {
-      setSelectedRows([...selectedRows, row.id]);
+      setSelectedRows((prevSelected) => [...prevSelected, row.id]);
     } else {
-      setSelectedRows(selectedRows.filter(id => id !== row.id));
+      setSelectedRows((prevSelected) =>
+        prevSelected.filter((id) => id !== row.id)
+      );
     }
   };
 
@@ -130,8 +134,8 @@ const EmployeesTable = () => {
   const handleDeleteConfirmed = async () => {
     try {
       if (selectedRow) {
-        await axios.delete(`http://localhost:5000/api/User/${selectedRow.id}`);
-        setRows(rows.filter(row => row.id !== selectedRow.id));
+        await axios.delete(`/api/User/${selectedRow.id}`);
+        setRows((prevRows) => prevRows.filter((row) => row.id !== selectedRow.id));
         setDeleteDialogOpen(false);
       }
     } catch (error) {
@@ -141,8 +145,10 @@ const EmployeesTable = () => {
 
   const handleEditConfirmed = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/User/${formData.id}`, formData);
-      setRows(rows.map(row => (row.id === formData.id ? formData : row)));
+      await axios.put(`/api/User/${formData.id}`, formData);
+      setRows((prevRows) =>
+        prevRows.map((row) => (row.id === formData.id ? formData : row))
+      );
       setEditDialogOpen(false);
     } catch (error) {
       console.error('Error editing user:', error);
@@ -150,16 +156,18 @@ const EmployeesTable = () => {
   };
 
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [e.target.name]: e.target.value
-    });
+    }));
   };
 
   const handleDeleteSelected = async () => {
     try {
-      await Promise.all(selectedRows.map(id => axios.delete(`http://localhost:5000/api/User/${id}`)));
-      setRows(rows.filter(row => !selectedRows.includes(row.id)));
+      await Promise.all(
+        selectedRows.map((id) => axios.delete(`/api/User/${id}`))
+      );
+      setRows((prevRows) => prevRows.filter((row) => !selectedRows.includes(row.id)));
       setSelectedRows([]);
     } catch (error) {
       console.error('Error deleting selected users:', error);
@@ -168,7 +176,7 @@ const EmployeesTable = () => {
 
   return (
     <Paper elevation={3} sx={{ width: '100%' }}>
-      <Box sx={{ padding: 1 }}>
+      <Box sx={{ padding: 2 }}>
         <Typography variant="h6" gutterBottom>
           Employee Table
         </Typography>
@@ -183,7 +191,7 @@ const EmployeesTable = () => {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => setAddUserDialogOpen(true)} // Open Add User Dialog
+            onClick={() => setAddUserDialogOpen(true)}
           >
             Add User
           </Button>
@@ -205,11 +213,7 @@ const EmployeesTable = () => {
                     <Checkbox
                       checked={selectedRows.length === filteredRows.length}
                       onChange={(e) => {
-                        if (e.target.checked) {
-                          setSelectedRows(filteredRows.map(row => row.id));
-                        } else {
-                          setSelectedRows([]);
-                        }
+                        setSelectedRows(e.target.checked ? filteredRows.map(row => row.id) : []);
                       }}
                     />
                   </TableCell>
@@ -273,91 +277,24 @@ const EmployeesTable = () => {
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
-          // Ensure page size remains consistent even with fewer rows
-          backIconButtonProps={{ disabled: page === 0 }}
-          nextIconButtonProps={{ disabled: page >= Math.ceil(filteredRows.length / rowsPerPage) - 1 }}
         />
       </Box>
 
-      {/* Edit Dialog */}
-      <Dialog open={editDialogOpen} onClose={() => setEditDialogOpen(false)}>
-        <DialogTitle>Edit User</DialogTitle>
-        <DialogContent>
-          <TextField
-            label="ID"
-            name="id"
-            value={formData.id || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-            disabled
-          />
-          <TextField
-            label="Name"
-            name="name"
-            value={formData.name || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Email"
-            name="email"
-            value={formData.email || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Floor"
-            name="floor"
-            value={formData.floor || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Seat Name"
-            name="seatName"
-            value={formData.seatName || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Role Name"
-            name="roleName"
-            value={formData.roleName || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Role Frequency"
-            name="roleFrequency"
-            value={formData.roleFrequency || ''}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setEditDialogOpen(false)}>Cancel</Button>
-          <Button onClick={handleEditConfirmed} color="primary">Save</Button>
-        </DialogActions>
-      </Dialog>
+      {/* Edit User Dialog */}
+      <EditUserDialog
+        open={editDialogOpen}
+        onClose={() => setEditDialogOpen(false)}
+        formData={formData}
+        onInputChange={handleInputChange}
+        onConfirm={handleEditConfirmed}
+      />
 
-      {/* Delete Dialog */}
-      <Dialog open={deleteDialogOpen} onClose={() => setDeleteDialogOpen(false)}>
-        <DialogTitle>Confirm Deletion</DialogTitle>
-        <DialogContent>
-          <Typography>Are you sure you want to delete this user?</Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setDeleteDialogOpen(false)}>Cancel</Button>
-          <Button onClick={handleDeleteConfirmed} color="error">Delete</Button>
-        </DialogActions>
-      </Dialog>
+      {/* Delete User Dialog */}
+      <DeleteUserDialog
+        open={deleteDialogOpen}
+        onClose={() => setDeleteDialogOpen(false)}
+        onConfirm={handleDeleteConfirmed}
+      />
 
       {/* Add User Dialog */}
       <Dialog open={addUserDialogOpen} onClose={() => setAddUserDialogOpen(false)} fullWidth>
