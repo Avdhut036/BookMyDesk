@@ -1,26 +1,30 @@
+# 📚 **BookMyDesk**
 
+**BookMyDesk** is a web application that simplifies desk booking for the week at the office. Built with React for the frontend and .NET for the backend, it ensures a smooth and organized workspace for users and organizations alike.
 
-# 📚 BookMyDesk
+![BookMyDesk](https://via.placeholder.com/1200x400?text=BookMyDesk) <!-- Replace with your project's image -->
 
-**BookMyDesk** is a web application that allows users to book their desk for the week at the office. Built with React for the frontend and .NET for the backend, this application simplifies desk booking management for organizations, ensuring a smooth and organized workspace.
+## 🛠️ Technologies Used
 
-![BookMyDesk](https://via.placeholder.com/1200x400?text=BookMyDesk) 
-
-## 🛠 Technologies Used
-
-- **Frontend**: [React](https://reactjs.org/) (JavaScript library for building user interfaces)
-- **Backend**: [.NET](https://dotnet.microsoft.com/) (Framework for building cross-platform applications)
-- **Database**: [SQL Server](https://www.microsoft.com/en-us/sql-server) (Relational database management system)
-- **UI Library**: [Material-UI](https://mui.com/) (React components for faster and easier web development)
-- **API**: REST API (for communication between frontend and backend)
+- **Frontend**: 
+  - [React](https://reactjs.org/) ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white) - A JavaScript library for building user interfaces.
+- **Backend**:
+  - [.NET](https://dotnet.microsoft.com/) ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=.net&logoColor=white) - A framework for building cross-platform applications.
+- **Database**:
+  - [SQL Server](https://www.microsoft.com/en-us/sql-server) ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white) - Relational database management system.
+- **UI Library**:
+  - [Material-UI](https://mui.com/) ![Material-UI](https://img.shields.io/badge/Material--UI-007FFF?style=flat&logo=mui&logoColor=white) - React components for faster and easier web development.
+- **API**:
+  - REST API 🌐 - For communication between frontend and backend.
 
 ## 🌟 Features
 
-- **Desk Booking**: Book desks for the week with a few clicks.
-- **Real-Time Availability**: Check desk availability in real-time.
-- **User Management**: Manage users and their bookings.
-- **Responsive Design**: Works seamlessly on both desktop and mobile devices.
-- **Search & Filter**: Easily find and filter available desks.
+- **Desk Booking** 📅: Easily book desks for the week with a few clicks.
+- **Real-Time Availability** 🕒: Check desk availability in real-time.
+- **User Management** 👥: Manage users and their bookings efficiently.
+- **Responsive Design** 📱💻: Works seamlessly on both desktop and mobile devices.
+- **Search & Filter** 🔍: Easily find and filter available desks.
+
 
 ## 📦 Installation
 
