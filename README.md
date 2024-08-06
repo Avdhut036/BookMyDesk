@@ -32,7 +32,7 @@ To get started with **BookMyDesk**, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/BookMyDesk.git
-   cd BookMyDesk/frontend
+   cd BookMyDesk/FRONTEND/BookMyDesk
    ```
 
 2. **Install dependencies**:
@@ -55,7 +55,7 @@ To get started with **BookMyDesk**, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/BookMyDesk.git
-   cd BookMyDesk/backend
+   cd BookMyDesk/BACKEND/BMDApplication
    ```
 
 2. **Restore dependencies**:
