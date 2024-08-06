@@ -66,11 +66,7 @@ const AddUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< Updated upstream:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.jsx
-    const { fname, lname, email, password, role, frequency, floor, seatName } = formData;
 
-    if (!fname || !lname || !email || !password || !role || !frequency || !floor || !seatName) {
-=======
     const { fname, lname, email, password, role, frequency, floor, seatName , phoneNo} =
       formData;
 
@@ -86,25 +82,22 @@ const AddUser = () => {
       !seatName ||
       !phoneNo
     ) {
->>>>>>> Stashed changes:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.js
+
       toast.error("All fields are required.");
       return;
     }
+// Validate the local part of the email
+const emailPattern = /^[a-zA-Z0-9._%+-]+$/;
+if (!emailPattern.test(email)) {
+  toast.error("Invalid email format.");
+  return;
+}
+const fullEmail = email + "@siddhatech.com";
+console.log("Form Data:", formData);
+console.log("seatid:" + seatId + ". floor:" + floor);
 
-    // Validate email format
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      toast.error("Invalid email format.");
-      return;
-    }
-    const fullEmail = email + "@siddhatech.com";
-    console.log("Form Data:", formData);
-    console.log("seatid:" + seatId + ". floor:" + floor);
     try {
-<<<<<<< Updated upstream:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.jsx
-      await axios.post("http://localhost:5000/api/User", { ...formData, email: fullEmail });
-      toast.success("User created successfully!");
-=======
+
       const response = await axios.post(
         "http://localhost:5000/api/user/createUser",
         {
@@ -122,7 +115,6 @@ const AddUser = () => {
       console.log("User Created:", response.data);
       toast.success("User Created successfully!");
 
->>>>>>> Stashed changes:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.js
       setFormData(initialFormData);
       setSeatNames([]);
       setSeatId(null);
