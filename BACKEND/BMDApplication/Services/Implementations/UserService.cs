@@ -21,6 +21,8 @@ namespace BMDApplication.Services.Implementations
         public IEnumerable<EmployeeDto> getEmployeeTable() { 
             return _userRepository.getEmployeeTable();
         }
-
+        public int createUser(User user) {
+            return _userRepository.createUser(user);
+        }
     }
 }

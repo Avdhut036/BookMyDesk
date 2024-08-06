@@ -6,5 +6,7 @@ namespace BMDApplication.Repositories.Interfaces
     public interface IBookingRepository
     {
         IEnumerable<Booking> getAllBookingHistory();
+
+        Booking createBooking(Booking booking);
     }
 }

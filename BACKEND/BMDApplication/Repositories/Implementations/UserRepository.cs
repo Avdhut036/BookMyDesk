@@ -81,5 +81,12 @@ namespace BMDApplication.Repositories.Implementations
                 .OrderByDescending(e => e.Id) // Order by Id or any other field as required
                 .ToList();
         }
+
+        public int createUser(User user)
+        {
+            _context.users.Add(user);
+            _context.SaveChanges();
+            return user.userId;
+        }
     }
 }

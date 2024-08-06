@@ -13,6 +13,7 @@ const AddUser = () => {
     frequency: "",
     floor: "",
     seatName: "",
+    phoneNo: "",
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -65,9 +66,27 @@ const AddUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< Updated upstream:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.jsx
     const { fname, lname, email, password, role, frequency, floor, seatName } = formData;
 
     if (!fname || !lname || !email || !password || !role || !frequency || !floor || !seatName) {
+=======
+    const { fname, lname, email, password, role, frequency, floor, seatName , phoneNo} =
+      formData;
+
+    //Check if all fields are filled
+    if (
+      !fname ||
+      !lname ||
+      !email ||
+      !password ||
+      !role ||
+      !frequency ||
+      !floor ||
+      !seatName ||
+      !phoneNo
+    ) {
+>>>>>>> Stashed changes:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.js
       toast.error("All fields are required.");
       return;
     }
@@ -79,10 +98,31 @@ const AddUser = () => {
       return;
     }
     const fullEmail = email + "@siddhatech.com";
-
+    console.log("Form Data:", formData);
+    console.log("seatid:" + seatId + ". floor:" + floor);
     try {
+<<<<<<< Updated upstream:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.jsx
       await axios.post("http://localhost:5000/api/User", { ...formData, email: fullEmail });
       toast.success("User created successfully!");
+=======
+      const response = await axios.post(
+        "http://localhost:5000/api/user/createUser",
+        {
+          fname: formData.fname,
+          lname: formData.lname,
+          emailId : fullEmail,
+          password: formData.password,
+          role: parseInt(formData.role, 10),
+          frequency: formData.frequency,
+          phoneNo: formData.phoneNo,
+          seatId: parseInt(seatId, 10),
+          floor: parseInt(formData.floor, 10),
+        }
+      );
+      console.log("User Created:", response.data);
+      toast.success("User Created successfully!");
+
+>>>>>>> Stashed changes:FRONTEND/BookMyDesk/src/Components/adminPage/AddUser.js
       setFormData(initialFormData);
       setSeatNames([]);
       setSeatId(null);
@@ -217,6 +257,16 @@ const AddUser = () => {
               </option>
             ))}
           </select>
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Phone Number</label>
+          <input
+            type="text"
+            className="form-control"
+            name="phoneNo"
+            value={formData.phoneNo}
+            onChange={handleChange}
+          />
         </div>
         <div className="d-flex justify-content-between">
           <button type="submit" className="btn btn-primary">

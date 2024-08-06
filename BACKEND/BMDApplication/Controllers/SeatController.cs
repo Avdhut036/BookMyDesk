@@ -29,9 +29,9 @@ namespace BMDApplication.Controllers
             return Ok(seat);
         }
 
-        [HttpGet("seatId/{seatName}")]
-        public IActionResult getSeatByName(string seatName) {
-            var seat =_seatService.getSeatByName(seatName);
+        [HttpGet("seatId/{seatName}/{seatFloor}")]
+        public IActionResult getSeatByName(string seatName,int seatFloor) {
+            var seat =_seatService.getSeatByName(seatName, seatFloor);
 
             if (seat == null)
             {

@@ -9,10 +9,12 @@ namespace BMDApplication.Services.Implementations
     public class BookingService : IBookingService
     {
         private readonly IBookingRepository _bookingHistoryRepository;
+        private readonly IBookingRepository _bookingRepository;
 
-        public BookingService(IBookingRepository bookingHistoryRepository)
+        public BookingService(IBookingRepository bookingHistoryRepository, IBookingRepository bookingRepository)
         {
             _bookingHistoryRepository = bookingHistoryRepository;
+            _bookingRepository = bookingRepository; 
         }
 
         public IEnumerable<BookingHistoryDTO> getBookingHistory()
@@ -31,5 +33,11 @@ namespace BMDApplication.Services.Implementations
                 updateDate = b.updateDate
             }).ToList();
         }
+
+        public Booking createBooking(Booking booking)
+        {
+            return _bookingRepository.createBooking(booking);
+        }
+
     }
 }

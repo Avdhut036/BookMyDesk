@@ -6,6 +6,8 @@ namespace BMDApplication.Services.Interfaces
     public interface IBookingService
     {
         IEnumerable<BookingHistoryDTO> getBookingHistory();
+
+        Booking createBooking(Booking booking);
     }
 }
 

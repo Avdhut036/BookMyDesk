@@ -6,5 +6,7 @@ namespace BMDApplication.Repositories.Interfaces
     {
         IEnumerable<User> getAllUsers();
         IEnumerable<EmployeeDto> getEmployeeTable();
+     
+        int createUser(User user);
     }
 }
